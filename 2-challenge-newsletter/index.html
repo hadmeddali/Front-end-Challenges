@@ -32,11 +32,11 @@
                         And much more!
                     </p>
                 </div>
-                <form class="form">
+                <div class="form">
                     <label for="iEmail">Email address</label>
                     <input type="email" id="iEmail" placeholder="email@company.com" required>
-                    <input class="btnform" type="submit" value="Subscribe to monthly newsletter">   
-                </form>
+                    <button onclick="Suscribe()" type="submit" id="btnForm"class="btnForm">Subscribe to monthly newsletter</button>   
+                </div>
             </section>
             <section class="sect2">
             </section>
@@ -44,12 +44,26 @@
     <!-- <img src="./assets/images/favicon-32x32.png" alt="">
     <img src="./assets/images/icon-success.svg" alt=""> -->
 
-        <div class="secondScreen">
+        <div class="secondScreen" id="secondScreen">
             <h1>Thanks for subscribing!</h1>
             <p> A confirmation email has been sent to <b>ash@loremcompany.com</b> . Please open it and click the button inside to confirm your subscription.</p>
-            <button>Dismiss message</button>
+            <button id="btnCancel" onclick="CancelSus()">Dismiss message</button>
         </div>
     </div>
-            
+      <script>
+        const input=document.getElementById('iEmail')
+        const btnSuscribe=document.getElementById('btnForm')
+        
+        function Suscribe(){
+            if(input===null){
+                alert('rellene el campo')
+            }else{
+                document.getElementById('secondScreen').style.display='block' 
+            }
+        }
+        function CancelSus(){
+            document.getElementById('secondScreen').style.display='none'
+        }
+      </script>      
 </body>
 </html>

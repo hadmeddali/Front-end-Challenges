@@ -13,7 +13,7 @@ body{
     place-content: center;
 }
 .firstScreen{
-    width: 100%;
+    width: 1000px;
     border: 1px solid;
     display: flex;
     flex-direction: row;
@@ -54,14 +54,14 @@ body{
     border-radius: 8px;
     border: 0.1px solid hsl(231, 7%, 60%);
 }
-.btnform{
+.btnForm{
     height: 40px;
     border-radius:8px ;
     background: hsl(234, 29%, 20%);
     color:hsl(0, 0%, 100%) ;
     cursor: pointer;
 }
-.btnform:hover{
+.btnForm:hover{
     transition: ease .3s;
     background: hsl(4, 100%, 67%);
 }
@@ -73,4 +73,7 @@ body{
     margin-top: 10px ;
     margin-right: 15px ; 
     border-radius: 20px;
+}
+.secondScreen{
+    display: none;
 }
